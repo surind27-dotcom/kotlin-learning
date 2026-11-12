@@ -1,0 +1,30 @@
+import java.lang.System.exit
+import kotlin.system.exitProcess
+fun площадь_круга() {
+    val p = 3.14f
+        println("Введи quit/q/exit или радиус")
+        var input = readln()
+        val command = input.lowercase()
+        if (command == "q" || command == "quit" || command == "exit") {
+            exitProcess(0)
+        }
+        var a = input.toDoubleOrNull()
+        if (a == null) {
+            println("Введи число")
+            return
+        }
+        if (a <= 0){
+            println("Введи Положительное число")
+            return
+        }
+        else {
+            val S = (a * a) * p
+            println(S)
+            return
+        }
+    }
+
+
+fun main() {
+    while (true) {площадь_круга()}
+}
