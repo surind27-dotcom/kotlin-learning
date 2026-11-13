@@ -26,22 +26,27 @@ fun knb() {
     val knb = line.random()
     println("Вводи свой выбор $line или вводи exit чтобы выйти и wins чтобы увидеть счет и записать очки")
     val input = readln().lowercase()
-    if (input == "load") {
-        loadscore()
-        return
-    }
-    if (input == "save") {
-        savescore()
-        return
-    }
-    if (input == "exit") {
-        savescore()
-        exitProcess(0)
-    }
-    if (input == "wins") {
-        println("Победы игрока $player_wins")
-        println("Победы компьютера $computer_wins")
-        return
+    when (input) {
+        "load" -> {
+            loadscore()
+            return
+        }
+
+        "save" -> {
+            savescore()
+            return
+        }
+
+        "exit" -> {
+            savescore()
+            exitProcess(0)
+        }
+
+        "wins" -> {
+            println("Победы игрока $player_wins")
+            println("Победы компьютера $computer_wins")
+            return
+        }
     }
     if (input !in line) {
         println("Нужно выбрать что-то из $line")
