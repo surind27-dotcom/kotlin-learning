@@ -19,6 +19,7 @@ fun game() {
 }
 fun main() {
     while (true) {
+        println("Угайдайте число от 1 до 100")
         game()
     }
 }

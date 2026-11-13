@@ -1,4 +1,5 @@
 import kotlin.system.exitProcess
+
 var history = mutableListOf<Double>()
 const val pi = 3.14
 fun circleArea() {
@@ -8,9 +9,9 @@ fun circleArea() {
     if (command == "q" || command == "quit" || command == "exit") {
         exitProcess(0)
     }
-    if (command == "history"){
-        if(history.isNotEmpty()){
-            for (item in history){
+    if (command == "history") {
+        if (history.isNotEmpty()) {
+            for (item in history) {
                 println(item)
 
             }
@@ -24,11 +25,10 @@ fun circleArea() {
         println("Введи число")
         return
     }
-    if (r <= 0){
+    if (r <= 0) {
         println("Введи Положительное число")
         return
-    }
-    else {
+    } else {
         val area: Double = (r * r) * pi
         println(area)
         history.add(area)
@@ -39,6 +39,8 @@ fun circleArea() {
 
 
 fun main() {
-    while (true) {circleArea()}
-   
+    while (true) {
+        circleArea()
+    }
+
 }
