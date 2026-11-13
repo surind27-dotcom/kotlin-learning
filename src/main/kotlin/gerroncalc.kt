@@ -3,6 +3,8 @@ import kotlin.math.sqrt
 import kotlin.system.exitProcess
 data class History(val a: Double = 0.0, val b: Double = 0.0, val c: Double = 0.0, val s: Double = 0.0)
 var history2gerr = mutableListOf<History>()
+
+
 fun halfperimetr(){
     println("Сторона а или команда(exit/history)")
     val inputa = readln()
@@ -46,7 +48,6 @@ fun halfperimetr(){
 fun main(){
 
         while(true){
-            println("Введи значения сторон для расчета или впиши exit")
             halfperimetr()}
 
 }
